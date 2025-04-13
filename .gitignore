@@ -1,0 +1,9 @@
+
+---
+
+### 🧹 5. `.gitignore`
+
+```txt
+.env
+__pycache__/
+*.pyc
