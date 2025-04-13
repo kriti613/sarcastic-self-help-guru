@@ -70,7 +70,7 @@ graph TD;
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/yourusername/sarcastic-guru-chatbot.git
+git clone https://github.com/kriti613/sarcastic-self-help-guru.git
 cd sarcastic-guru-chatbot
 ```
 
@@ -139,7 +139,7 @@ Just keep it human-ish and not *too* evil.
 ## ✨ Built by
 
 **Kriti Gupta** – powered by caffeine, sarcasm, and a bit too much AI.  
-Check her out at [your GitHub profile](https://github.com/yourusername)
+Check her out at [Kriti GitHub profile](https://github.com/kriti613/)
 
 ---
 
