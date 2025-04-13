@@ -1,148 +1,141 @@
+# 🧠 Sarcastic Self-Help Guru 🤖💬  
+> "Therapy is expensive, my sarcasm is free."
 
-# 🧠 Sarcastic Self-Help Guru 🤖  
-Because what you *really* needed today… was more unsolicited advice (but like, with attitude).
+A playful, sassy chatbot that roasts you while giving life advice. Built with Streamlit and Gemini API (Google AI), this app delivers hilarious, sarcastic, yet oddly insightful responses — with emojis, animations, sample prompts, and a sprinkle of attitude.
 
-Welcome to your personal AI-powered therapist who has zero chill and no interest in toxic positivity. Built using **Google’s Gemini 2.0 Flash API** + **Streamlit**, this chatbot delivers snark, sass, and (accidentally?) helpful advice.
 
----
+## 🚀 About the Project
 
-## 💡 Why This Exists
+We all love a good self-help tip… but let’s be honest, sometimes you just want someone to roast you while they motivate you.  
+The idea behind this project was to build a chatbot that serves life advice with a bucketful of sarcasm, emojis, and attitude.  
+It's like therapy, except sassier and way cheaper.
 
-You’ve seen *too much* of “Believe in yourself!” energy.  
-This one’s different. It says things like:
-
-> “Sure, chase your dreams. What’s the worst that could happen? Probably everything.”
-
-Yes — it’s sarcastic, cynical, and still gives you the existential slap you probably needed.
+The chatbot is alive with animations, emojis, and clever banter. Whether you're asking, *"Why am I always broke?"* or *"Is my crush into me?"*, you'll get roasted, entertained, and (maybe) slightly enlightened.
 
 ---
 
-## ⚙️ Tech Stack
+## 🎨 Demo Video
 
-| Layer              | Tech Used                   |
-|--------------------|-----------------------------|
-| 💬 Chat Engine      | Gemini 2.0 Flash API         |
-| 🖼️ UI Framework     | Streamlit                   |
-| 🔐 Secret Handling  | `.env` + `python-dotenv`    |
-| 🔁 API Access       | `requests` Python library   |
-| 👻 Personality      | Dark humor + Gen-Z memes    |
+[▶️ Click here to watch the Demo]("https://www.youtube.com/watch?v=chbFbRaWtBs")
 
 ---
 
-## 🧠 How It Works (Project Architecture)
+## 🛠️ Tech Stack
 
-```
-User Input
-   ⬇
-Streamlit Frontend (`app.py`)
-   ⬇
-Gemini API Call (via POST request)
-   ⬇
-Witty Burn is Returned
-   ⬇
-Streamlit UI Displays the Damage
-```
+- **Python**: Core backend logic.
+- **Streamlit**: For fast, interactive, and sleek web app UI.
+- **Gemini API (Google AI)**: Generates sarcastic, witty replies.
+- **Streamlit Chat Components**: Displays messages in chat format.
+- **Custom CSS Styling**: Added fonts, animations, message styles.
+- **GitHub Actions**: Automates deployment workflows.
+- **.env & GitHub Secrets**: Secures API keys and sensitive info.
 
 ---
 
-## 🧾 Flowchart
+## 🔥 Features
+
+- ✅ **Sarcastic AI Replies**: Funny, witty, and perfectly roasted responses.
+- ✅ **Typing Indicator**: Shows "Guru is crafting your roast..."
+- ✅ **Sample Questions**: Quick prompts to get you started.
+- ✅ **Emoji Reactions**: Makes responses lively and relatable.
+- ✅ **GitHub Actions**: Secure API key handling and CI/CD pipeline.
+
+---
+
+## 🧩 Architecture & Flow
 
 ```mermaid
-graph TD;
-    A[User types complaint] --> B[Streamlit captures input];
-    B --> C[Payload sent to Gemini 2.0 Flash];
-    C --> D[API returns sarcastic advice];
-    D --> E[Streamlit displays it sassily];
-    E --> F[User rethinks life choices];
-```
+graph TD
+A[User Input / Sample Questions] --> B[Streamlit Frontend]
+B --> C[Session State Management]
+C --> D[Gemini API Request]
+D --> E[API Response: Sarcastic Reply]
+E --> F[Message Formatting: Emojis + Animations]
+F --> G[Chat Display with Streamlit Chat]
+Session State manages chat history.
 
----
+Gemini API processes prompts and returns witty responses.
 
-## 🧪 Example Prompt & Output
+Frontend UI styled with custom CSS & Streamlit components.
 
-**User:** “I feel stuck in life.”  
-**Guru:** “Shocker. You and 7 billion others. Have you tried turning yourself off and on again?”
+📂 Project Structure
+bash
+Copy
+Edit
+📦 sarcastic-self-help-guru
+├── .github/workflows/       # GitHub Actions workflow
+├── .env                     # Local environment variables (excluded from repo)
+├── app.py                   # Main Streamlit application
+├── requirements.txt         # Python dependencies
+├── sarcastic-chat-bot.mp4   # Demo video
+├── README.md                # Project documentation
+└── ...
+🚧 Challenges Faced
+Session Management: Streamlit resets states often, maintaining chat flow required careful handling.
 
----
+Dynamic Input Handling: Balancing between sample questions and user inputs.
 
-## 🛠️ Setup Guide (For Humans, Not Robots)
+Deployment Secrets: Keeping the API key safe in CI/CD using GitHub Secrets.
 
-### 1. Clone the repo
+Response Styling: Making AI responses short, funny, and emoji-rich consistently.
 
-```bash
-git clone https://github.com/kriti613/sarcastic-self-help-guru.git
-cd sarcastic-guru-chatbot
-```
+UX Improvements: Adding animations, auto-scroll, and typing indicators.
 
-### 2. Install the dependencies
+🎓 What I Learned
+Mastered Streamlit components and advanced customizations.
 
-```bash
+Built API request handling and real-time chat flow.
+
+Understood secure deployment with GitHub Actions and environment secrets.
+
+Improved UI/UX with CSS tweaks and animations.
+
+Learned the importance of session state for maintaining conversations.
+
+🚀 Future Improvements
+🎚️ Add Roast Meter: User-adjustable sarcasm intensity.
+
+🎭 Add Sentiment Detector: Detect user sentiment and adjust replies accordingly.
+
+🎉 Add Meme/GIF Reactions: Visual replies for extra sass.
+
+🌐 Deploy Publicly: Live URL for public access.
+
+📩 How to Run Locally
+Clone the repository
+
+bash
+Copy
+Edit
+git clone https://github.com/kriti613/sarcastic-self-help-guru
+cd sarcastic-self-help-guru
+Install dependencies
+
+bash
+Copy
+Edit
 pip install -r requirements.txt
-```
+Create .env file
 
-### 3. Add your **Gemini API key**
+bash
+Copy
+Edit
+GOOGLE_API_KEY=your_gemini_api_key
+Run the app
 
-Create a `.env` file (and don't share it with your crush):
-
-```
-GEMINI_API_KEY=your_actual_api_key_here
-```
-
-Make sure `.env` is in `.gitignore`. Your API key deserves privacy.
-
-### 4. Run the app locally
-
-```bash
+bash
+Copy
+Edit
 streamlit run app.py
-```
+🙌 Let's Connect!
+If you enjoyed this project or have feedback, feel free to connect:
 
-Boom. It’s live. You’re being roasted by AI.
+💼 LinkedIn - https://www.linkedin.com/in/kriti-gupta-743599199/
 
----
 
-## 🧾 File Structure
+📩 Mail: kritigupta0613@gmail.com
 
-```
-📦 sarcastic-guru-chatbot/
-├── app.py               # Streamlit frontend
-├── .env                 # Your Gemini API key (NOT committed)
-├── .gitignore           # Ignores .env
-├── requirements.txt     # All the pip magic
-└── README.md            # This beauty
-```
+🌟 Give it a Star!
+If you found this project fun, consider giving it a ⭐️ on GitHub!
 
----
-
-## 🔐 API Key Security (No Leaks Here)
-
-> 🛑 Do NOT commit `.env` to GitHub.  
-We’re keeping things 🔐 secure by adding it to `.gitignore`.
-
----
-
-## 📈 Features To Add (or not, we’re lazy)
-
-- [ ] Streamlit Cloud Deployment  
-- [ ] Voice-to-sarcasm converter  
-- [ ] Mood detection and moodier responses  
-- [ ] Burn severity meter (1–💀)
-
----
-
-## 🤝 Contributions Welcome
-
-Got jokes? Better burns? Open a PR and make this chatbot spicier.  
-Just keep it human-ish and not *too* evil.
-
----
-
-## ✨ Built by
-
-**Kriti Gupta** – powered by caffeine, sarcasm, and a bit too much AI.  
-Check her out at [Kriti GitHub profile](https://github.com/kriti613/)
-
----
-
-## 💬 Final Thought
-
-> "If sarcasm was a sport, this bot would be your coach... and you’d still lose."
+Made with ❤️, Python, and a little bit of sarcasm.
