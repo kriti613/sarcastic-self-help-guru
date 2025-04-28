@@ -57,8 +57,8 @@ if "user_input" not in st.session_state:
 
 # ====== Load API Key ======
 load_dotenv()
-# API_KEY = os.getenv("GOOGLE_API_KEY")
-API_KEY = os.environ.get("GOOGLE_API_KEY")
+API_KEY = os.getenv("GOOGLE_API_KEY")
+# API_KEY = os.environ.get("GOOGLE_API_KEY")
 
 
 # ====== API Call Function ======
